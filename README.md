@@ -47,13 +47,22 @@ https://nextjs.org/learn/dashboard-app/getting-started
 
  - /app						- contains all routes, components, logic, etc.
  -     /lib					- contains reusable utility functions
- - 	/ui						- contains all ui components
- - /public						- static assets (images, etc)
- - .config						- config files in root folder
+ - 	   /ui					- contains all ui components
+ - /public					- static assets (images, etc)
+ - .config					- config files in root folder
 
 Example class to represent object data returned from the db:
  - 	/app/lib/definitions.ts
 
 ### Chapter 2: CSS
 https://nextjs.org/learn/dashboard-app/css-styling
+
+ - global css styles: /app/ui/global.css
+ - import into your root layout: /app/layout.tsx
+ - project uses tailwind css framework. https://tailwindcss.com/
+ - css modules can also be used: https://nextjs.org/docs/app/getting-started/css
+ - clsx - another css tool (makes it easy to toggle class names). https://www.npmjs.com/package/clsx
+
+### Chapter 3: Optimizing fonts and images
+https://nextjs.org/learn/dashboard-app/optimizing-fonts-images
 
