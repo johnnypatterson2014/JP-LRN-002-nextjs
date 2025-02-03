@@ -37,6 +37,23 @@ View postgres db tables here:
 https://console.neon.tech/app/projects/floral-truth-39027350/branches/br-polished-lab-a66o8rdi/tables?database=neondb
 
 
+## Next.js tutorial
 
+https://nextjs.org/learn/dashboard-app/
 
+### Chapter 1: getting started
+https://nextjs.org/learn/dashboard-app/getting-started
+create sample next.js app
+
+/app						- contains all routes, components, logic, etc.
+    /lib					- contains reusable utility functions
+	/ui						- contains all ui components
+/public						- static assets (images, etc)
+.config						- config files in root folder
+
+Example class to represent object data returned from the db:
+	/app/lib/definitions.ts
+
+### Chapter 2: CSS
+https://nextjs.org/learn/dashboard-app/css-styling
 
