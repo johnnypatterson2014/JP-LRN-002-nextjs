@@ -93,7 +93,20 @@ https://nextjs.org/learn/dashboard-app/fetching-data
 
  - use react server components to fetch data
  - for our example, we wil use the postgres.js library: https://github.com/porsager/postgres
- - see example: /app/lib/data.ts
+ - see example: 
+ - 		/app/lib/data.ts - functions to make sql queries
+ - 		/app/dashboard/page.tsx - calls the sql functions and uses UI components to display the data
+ - 		/app/ui/dashboard/*.tsx - ui components to display the data
+
+Note: sql calls are not async. We will fix this.
+ - 		/app/dashboard/page.tsx: see line 13; fetchLatestInvoices() must wait for fetchRevenue() to finish first
+
+ Parallel data fetching
+  - For example, in data.ts, we're using Promise.all() in the fetchCardData() function.
+  - problem: what if one data call takes a lot longer than the others?
+
+### Chapter 8: Static and Dynamic Rendering
+https://nextjs.org/learn/dashboard-app/static-and-dynamic-rendering
 
 
 
