@@ -178,10 +178,10 @@ These are the steps you'll take to update an invoice:
  - Update the invoice data in your database.
 
 
+### Chapter 13: Handling Errors
+https://nextjs.org/learn/dashboard-app/error-handling
 
-
-
-
-
+### Chapter 14: Improving Accessibility
+https://nextjs.org/learn/dashboard-app/improving-accessibility
 
 
