@@ -140,6 +140,44 @@ Streaming a component
 
 Grouping components
 
+### Chapter 10: Partial Prerendering
+https://nextjs.org/learn/dashboard-app/partial-prerendering
+
+### Chapter 11: Adding Search and Pagination
+https://nextjs.org/learn/dashboard-app/adding-search-and-pagination
+
+Here's a quick overview of the implementation steps:
+ - Capture the user's input.
+ - Update the URL with the search params.
+ - Keep the URL in sync with the input field.
+ - Update the table to reflect the search query.
+
+see files:
+ - /app/dashboard/invoices/page.tsx
+ - /app/ui/search.tsx
+ - /app/ui/invoices/pagination.tsx
+
+### Chapter 12: Mutating Data
+https://nextjs.org/learn/dashboard-app/mutating-data
+
+React Server Actions allow you to run asynchronous code directly on the server. They eliminate the need to create API endpoints to mutate your data. Instead, you write asynchronous functions that execute on the server and can be invoked from your Client or Server Components.
+
+Here are the steps you'll take to create a new invoice:
+ - Create a form to capture the user's input.
+ - Create a Server Action and invoke it from the form.
+ - Inside your Server Action, extract the data from the formData object.
+ - Validate and prepare the data to be inserted into your database.
+ - Insert the data and handle any errors.
+ - Revalidate the cache and redirect the user back to invoices page.
+
+These are the steps you'll take to update an invoice:
+ - Create a new dynamic route segment with the invoice id.
+ - Read the invoice id from the page params.
+ - Fetch the specific invoice from your database.
+ - Pre-populate the form with the invoice data.
+ - Update the invoice data in your database.
+
+
 
 
 
