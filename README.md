@@ -105,12 +105,40 @@ Note: sql calls are not async. We will fix this.
   - For example, in data.ts, we're using Promise.all() in the fetchCardData() function.
   - problem: what if one data call takes a lot longer than the others?
 
+Note: The dashboard is static, so any data updates will not be reflected on your application. We will fix this.
+
 ### Chapter 8: Static and Dynamic Rendering
 https://nextjs.org/learn/dashboard-app/static-and-dynamic-rendering
 
+### Chapter 9: Streaming
+https://nextjs.org/learn/dashboard-app/streaming
 
+Streaming is a data transfer technique that allows you to break down a route into smaller "chunks" and progressively stream them from the server to the client as they become ready.
 
+By streaming, you can prevent slow data requests from blocking your whole page. This allows the user to see and interact with parts of the page without waiting for all the data to load before any UI can be shown to the user.
 
+Streaming works well with React's component model, as each component can be considered a chunk.
+
+There are two ways you implement streaming in Next.js:
+ - At the page level, with the loading.tsx file (which creates <Suspense> for you).
+ - At the component level, with <Suspense> for more granular control.
+
+ - loading.tsx is a special Next.js file built on top of React Suspense. It allows you to create fallback UI to show as a replacement while page content loads.
+ - Since <SideNav> is static, it's shown immediately. The user can interact with <SideNav> while the dynamic content is loading.
+ - The user doesn't have to wait for the page to finish loading before navigating away (this is called interruptable navigation).
+
+Adding loading skeletons
+ - A loading skeleton is a simplified version of the UI. Many websites use them as a placeholder (or fallback) to indicate to users that the content is loading. Any UI you add in loading.tsx will be embedded as part of the static file, and sent first. Then, the rest of the dynamic content will be streamed from the server to the client.
+
+Create a new folder called /(overview) inside the dashboard folder. Then, move your loading.tsx and page.tsx files inside the folder: Now, the loading.tsx file will only apply to your dashboard overview page (and not the child pages invoices and customers).
+
+Route groups allow you to organize files into logical groups without affecting the URL path structure. When you create a new folder using parentheses (), the name won't be included in the URL path. So /dashboard/(overview)/page.tsx becomes /dashboard.
+
+Streaming a component
+ - So far, you're streaming a whole page. But you can also be more granular and stream specific components using React Suspense.
+ - Suspense allows you to defer rendering parts of your application until some condition is met (e.g. data is loaded). You can wrap your dynamic components in Suspense. Then, pass it a fallback component to show while the dynamic component loads.
+
+Grouping components
 
 
 
