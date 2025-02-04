@@ -184,4 +184,15 @@ https://nextjs.org/learn/dashboard-app/error-handling
 ### Chapter 14: Improving Accessibility
 https://nextjs.org/learn/dashboard-app/improving-accessibility
 
+### Chapter 15: Adding Authentication
+https://nextjs.org/learn/dashboard-app/adding-authentication
+
+We will use NextAuth.js for authentication: https://authjs.dev/reference/nextjs
+
+### Chapter 16: Adding Metadata
+https://nextjs.org/learn/dashboard-app/adding-metadata
+
+
+Learn more: https://nextjs.org/learn/dashboard-app/next-steps
+
 
